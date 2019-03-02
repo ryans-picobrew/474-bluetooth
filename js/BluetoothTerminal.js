@@ -267,21 +267,21 @@ class BluetoothTerminal {
       return Promise.resolve(this._characteristic);
     }
 
-    this._log('Connecting to GATT server...');
+    //this._log('Connecting to GATT server...');
 
     return device.gatt.connect().
         then((server) => {
-          this._log('GATT server connected', 'Getting service...');
+          //this._log('GATT server connected', 'Getting service...');
 
           return server.getPrimaryService(this._serviceUuid);
         }).
         then((service) => {
-          this._log('Service found', 'Getting characteristic...');
+          //this._log('Service found', 'Getting characteristic...');
 
           return service.getCharacteristic(this._characteristicUuid);
         }).
         then((characteristic) => {
-          this._log('Characteristic found');
+          //this._log('Characteristic found');
 
           this._characteristic = characteristic; // Remember characteristic.
 
@@ -296,11 +296,12 @@ class BluetoothTerminal {
    * @private
    */
   _startNotifications(characteristic) {
-    this._log('Starting notifications...');
+    //this._log('Starting notifications...');
 
     return characteristic.startNotifications().
         then(() => {
           this._log('Notifications started');
+          Document.getElementById("connected").
 
           characteristic.addEventListener('characteristicvaluechanged',
               this._boundHandleCharacteristicValueChanged);

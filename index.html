@@ -13,7 +13,7 @@
     <meta name="description"
           content="Progressive Web Application for serial communication with your own Bluetooth Low Energy (Smart) devices">
 
-    <title>Web Bluetooth Terminal</title>
+    <title>Laser Trigger Bluetooth App</title>
 
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
@@ -34,7 +34,7 @@
 
         <div class="toolbar">
 
-            <div id="device-name" class="name">Terminal</div>
+            <div id="device-name" class="name">Laser Trigger Status App</div>
 
             <div class="buttons">
 
@@ -50,14 +50,19 @@
 
         </div>
 
-        <div id="terminal" class="terminal"></div>
+        <div id="terminal" class="terminal">
+
+        </div>
+        <div id="connected"><span>Connection: </span></div>
+        <div id="Active"><span>Status:</span><span></span></div>
+        <div id="Last Shot"><span>Last: </span>No Shot Found!</div>
 
         <form id="send-form" class="send-form">
 
             <input id="input" type="text" aria-label="Input" autocomplete="off" placeholder="Type something to send...">
 
             <button type="submit" aria-label="Send">
-                <i class="material-icons">send</i>
+                <i class="material-icons">UART Send</i>
             </button>
 
         </form>
