@@ -58,7 +58,7 @@ button {
     font-weight: 600;
     color: rgb(39, 39, 39);
     line-height: 1;
-    padding: 2.5rem 1rem;
+    padding: 2.5rem 1rem 1rem;
     word-break: break-word; }
     .terminal div.out {
       color: #F44336; }
@@ -72,9 +72,10 @@ button {
 
 .box {
   background-color:#ff0c0c;
-  margin-left: 1.0rem;
+  margin-left: 1.0rem!important;
   height: 20px;
   width: 20px;
+  padding: 0!important;
   display: inline-block;
 }
 
