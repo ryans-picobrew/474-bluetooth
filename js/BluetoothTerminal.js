@@ -217,6 +217,7 @@ class BluetoothTerminal {
       return;
     }
 
+    connection.innerHTML = 'disconnected';
     this._log('Disconnecting from "' + device.name + '" bluetooth device...');
 
     device.removeEventListener('gattserverdisconnected',
