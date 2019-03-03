@@ -5,9 +5,13 @@ const disconnectButton = document.getElementById('disconnect');
 const terminalContainer = document.getElementById('terminal');
 const sendForm = document.getElementById('send-form');
 const inputField = document.getElementById('input');
+const connection = document.getElementById('connected');
+const active = document.getElementById('Active');
+const lastShot  = document.getElementById('LastShot');
+const activebox = document.getElementById('activebox');
 
 // Helpers.
-const defaultDeviceName = 'Terminal';
+const defaultDeviceName = 'Laser Trigger Connection Status';
 const terminalAutoScrollingLimit = terminalContainer.offsetHeight / 2;
 let isTerminalAutoScrolling = true;
 
@@ -20,12 +24,12 @@ const scrollElement = (element) => {
 };
 
 const logToTerminal = (message, type = '') => {
-  terminalContainer.insertAdjacentHTML('beforeend',
-      `<div${type && ` class="${type}"`}>${message}</div>`);
+  //terminalContainer.insertAdjacentHTML('beforeend',
+  //    `<div${type && ` class="${type}"`}>${message}</div>`);
 
-  if (isTerminalAutoScrolling) {
-    scrollElement(terminalContainer);
-  }
+  //if (isTerminalAutoScrolling) {
+    //scrollElement(terminalContainer);
+  //}
 };
 
 // Obtain configured instance.
@@ -33,7 +37,19 @@ const terminal = new BluetoothTerminal();
 
 // Override `receive` method to log incoming data to the terminal.
 terminal.receive = function(data) {
-  logToTerminal(data, 'in');
+  //logToTerminal(data, 'in');
+  if (data.startsWith('A'))
+  {
+    active.innerHTML = 'Trigger Ready';
+  }
+  else if(data.startsWith('U'))
+  {
+    active.innerHTML = 'Trigger Waiting';
+  }
+  else if(data.startsWith('Fired'))
+  {
+    lastShot.innerHTML = data;
+  }
 };
 
 // Override default log method to output messages to the terminal and console.

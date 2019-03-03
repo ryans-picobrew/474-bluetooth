@@ -51,18 +51,16 @@
         </div>
 
         <div id="terminal" class="terminal">
-
+            <div><span>Connection: </span><span id="connected"></span></div>
+            <div><span>Status: </span><span id="Active"></span></div><span id="activebox"></span>
+            <div><span>Last: </span><span id="LastShot">No Shot Found!</span></div>
         </div>
-        <div id="connected"><span>Connection: </span></div>
-        <div id="Active"><span>Status:</span><span></span></div>
-        <div id="Last Shot"><span>Last: </span>No Shot Found!</div>
-
         <form id="send-form" class="send-form">
 
             <input id="input" type="text" aria-label="Input" autocomplete="off" placeholder="Type something to send...">
 
             <button type="submit" aria-label="Send">
-                <i class="material-icons">UART Send</i>
+                <i class="material-icons">send</i>
             </button>
 
         </form>
