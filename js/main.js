@@ -11,6 +11,9 @@ const lastShot  = document.getElementById('LastShot');
 const activebox = document.getElementById('activebox');
 var deviceName = "Laser App Bluetooth";
 
+const greenbox = '#25ea25';
+const redbox = '#ff0c0c';
+
 // Helpers.
 const defaultDeviceName = "Laser App Bluetooth";
 const terminalAutoScrollingLimit = terminalContainer.offsetHeight / 2;
@@ -42,10 +45,12 @@ terminal.receive = function(data) {
   if (data.startsWith('A'))
   {
     active.innerHTML = 'Trigger Ready';
+    activebox.style.backgroundColor = greenbox;
   }
   else if(data.startsWith('U'))
   {
     active.innerHTML = 'Trigger Waiting';
+    activebox.style.backgroundColor = redbox;
   }
   else if(data.startsWith('Fired'))
   {

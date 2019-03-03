@@ -54,7 +54,7 @@ button {
   .terminal div {
     margin: 0 auto;
     text-align:center;
-    font-size: calc(.8rem + 4vw);
+    font-size: calc(.6rem + 2vw);
     font-weight: 600;
     color: rgb(39, 39, 39);
     line-height: 1;
@@ -68,6 +68,12 @@ button {
 .subText {
   color: rgb(107, 107, 107);
   font-weight: 300;
+}
+
+.box {
+  background-color:#ff0c0c;
+  height: calc(.6rem + 2vw);
+  width: calc(.6rem + 2vw);
 }
 
 .send-form {
