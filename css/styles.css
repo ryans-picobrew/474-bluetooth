@@ -54,7 +54,7 @@ button {
   .terminal div {
     margin: 0 auto;
     text-align:center;
-    font-size: .8rem + calc(4vw);
+    font-size: calc(.8rem + 4vw);
     font-weight: 600;
     color: rgb(39, 39, 39);
     line-height: 1;
