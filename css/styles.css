@@ -52,7 +52,11 @@ button {
   overflow: auto;
   padding: 4px 0; }
   .terminal div {
-    color: #9E9E9E;
+    margin: 0 auto;
+    text-align:center;
+    font-size: .8rem + 100vh;
+    font-weight: 600;
+    color: rgb(39, 39, 39);
     line-height: 1;
     padding: 4px 8px;
     word-break: break-word; }
@@ -60,6 +64,11 @@ button {
       color: #F44336; }
     .terminal div.in {
       color: #2196F3; }
+
+.subText {
+  color: rgb(107, 107, 107);
+  font-weight: 300;
+}
 
 .send-form {
   display: flex;
