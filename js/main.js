@@ -45,11 +45,13 @@ terminal.receive = function(data) {
   if (data.startsWith('A'))
   {
     active.innerHTML = 'Trigger Ready';
+    active.style.color = greenbox;
     activebox.style.backgroundColor = greenbox;
   }
   else if(data.startsWith('U'))
   {
-    active.innerHTML = 'Trigger Waiting';
+    active.innerHTML = 'Trigger Wait ';
+    active.style.color = redbox;
     activebox.style.backgroundColor = redbox;
   }
   else if(data.startsWith('Fired'))
