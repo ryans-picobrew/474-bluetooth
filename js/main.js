@@ -9,9 +9,10 @@ const connection = document.getElementById('connected');
 const active = document.getElementById('Active');
 const lastShot  = document.getElementById('LastShot');
 const activebox = document.getElementById('activebox');
+var deviceName = "Laser App Bluetooth";
 
 // Helpers.
-const defaultDeviceName = 'Laser Trigger Connection Status';
+const defaultDeviceName = "Laser App Bluetooth";
 const terminalAutoScrollingLimit = terminalContainer.offsetHeight / 2;
 let isTerminalAutoScrolling = true;
 
@@ -72,8 +73,9 @@ const send = (data) => {
 connectButton.addEventListener('click', () => {
   terminal.connect().
       then(() => {
-        deviceNameLabel.textContent = terminal.getDeviceName() ?
-            terminal.getDeviceName() : defaultDeviceName;
+        deviceName =  terminal.getDeviceName() ?
+                      deviceName + "(" + terminal.getDeviceName() + ")"
+                      : defaultDeviceName;
       });
 });
 

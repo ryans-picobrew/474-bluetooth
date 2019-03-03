@@ -301,7 +301,8 @@ class BluetoothTerminal {
     return characteristic.startNotifications().
         then(() => {
           this._log('Notifications started');
-          //Document.getElementById("connected").
+          connection.innerHTML = deviceName;
+          connection.style.visibility = 'visible';
 
           characteristic.addEventListener('characteristicvaluechanged',
               this._boundHandleCharacteristicValueChanged);
@@ -336,6 +337,9 @@ class BluetoothTerminal {
 
     this._log('"' + device.name +
         '" bluetooth device disconnected, trying to reconnect...');
+
+    connection.innerHTML = deviceName;
+    connection.style.visibility = 'hidden';
 
     this._connectDeviceAndCacheCharacteristic(device).
         then((characteristic) => this._startNotifications(characteristic)).
