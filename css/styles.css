@@ -74,6 +74,7 @@ button {
   background-color:#ff0c0c;
   height: calc(.6rem + 2vw);
   width: calc(.6rem + 2vw);
+  display: inline-block;
 }
 
 .send-form {

@@ -50,7 +50,7 @@ terminal.receive = function(data) {
   }
   else if(data.startsWith('U'))
   {
-    active.innerHTML = 'Trigger Wait ';
+    active.innerHTML = 'Trigger  Wait';
     active.style.color = redbox;
     activebox.style.backgroundColor = redbox;
   }
