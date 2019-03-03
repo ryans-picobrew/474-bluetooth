@@ -72,9 +72,14 @@ button {
 
 .box {
   background-color:#ff0c0c;
-  height: calc(.6rem + 2vw);
-  width: calc(.6rem + 2vw);
+  margin-left: 1.5rem;
+  height: calc(1.5vw);
+  width: calc(1.5vw);
   display: inline-block;
+}
+
+.pd-top{
+  padding-top: 3rem;
 }
 
 .send-form {
