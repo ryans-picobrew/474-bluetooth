@@ -58,7 +58,7 @@ button {
     font-weight: 600;
     color: rgb(39, 39, 39);
     line-height: 1;
-    padding: 4px 8px;
+    padding: 2.5rem 1rem;
     word-break: break-word; }
     .terminal div.out {
       color: #F44336; }
